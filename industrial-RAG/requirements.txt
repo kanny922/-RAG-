@@ -1,0 +1,22 @@
+# ============================================================
+# 工业业务智能文档问答助手 —— 依赖清单
+# 安装命令：pip install -r requirements.txt
+# 提示：pdf2image 还需系统级软件 poppler（Windows 需单独安装并配置 PATH）
+# ============================================================
+
+# 文档解析
+pymupdf>=1.24.0                  # PDF 文本提取（import 名为 fitz）
+python-docx>=1.1.0               # Word 文档解析
+pdf2image>=1.17.0                # 扫描版 PDF 转图片（OCR 前置，依赖 poppler）
+rapidocr_onnxruntime>=1.3.0      # 轻量 OCR 引擎（扫描件文字识别，可装可不装）
+
+# 向量化与向量数据库
+sentence-transformers>=2.7.0     # Embedding 模型与 CrossEncoder 重排模型
+chromadb>=0.5.0                  # 持久化向量数据库
+
+# 大模型与界面
+openai>=1.30.0                   # OpenAI 兼容接口 SDK
+gradio>=4.20.0                   # Web 界面
+
+# 基础依赖
+numpy>=1.24.0                    # 向量数值计算
